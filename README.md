@@ -1,12 +1,12 @@
 # Molekel
 ## General Information
-Molekel is a simple, slow, and inefficient program to calculate molecular energy
+Molekel is a simple, slow, and inefficient program to calculate molecular energies
 (currently only RHF). The integrals are evaluated using the McMurchie-Davidson scheme.
 The code is inspired by the work of Joshua Goings (https://joshuagoings.com/2017/04/28/integrals/)
-, but is written in Fortran. Ohter sources are the books Molecular Electronic-Structure
+, but is written in Fortran. Other sources are the books Molecular Electronic-Structure
 Theory by Helgaker *et. al.* and Modern Quantum Chemistry by Attila Szabo and Neil S.
 Ostlund. The cmake build is based on the work of Leonard Reuter (https://github.com/Leonard-Reuter/cmake-fortran-template)
- and some module of the code were copied from Amolqc (https://github.com/luechow-group/Amolqc).
+ and some modules of the code were copied from Amolqc (https://github.com/luechow-group/Amolqc).
 The program is intended to serve for educational purposes, however, feel free to do what you
 want with it!
 ## Build Instructions
