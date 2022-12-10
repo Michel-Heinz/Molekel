@@ -1,0 +1,47 @@
+                    __  _______  __    ________ __ ________
+                   /  |/  / __ \/ /   / ____/ //_// ____/ /
+                  / /|_/ / / / / /   / __/ / ,<  / __/ / /
+                 / /  / / /_/ / /___/ /___/ /| |/ /___/ /___
+                /_/  /_/\____/_____/_____/_/ |_/_____/_____/
+
+                This program computes molecular energies!
+
+******************************************************************************
+
+Input format:
+    section begin with a '$<sectionName>(' and end with ')' the different
+    keywords are to be separated by commas. For inspiration, take a look at
+    the test/example.in file.
+------------------------------------------------------------------------------
+    'general' section:
+        verbose=i : where i is either 1, 2, or 3.
+                    if verbose=1: Only the energy of the chosen method is
+                                  output.
+                    if verbose=2: The potential, kinetic, other energies and
+                                  the dipole moments are printed additionally.
+                    if verbose=3: The overlap matrix and the MOs and their
+                                  coefficients are printed in addition to the
+                                  rest.
+------------------------------------------------------------------------------
+    'method' section:
+        RHF             : Currently only RHF is implemented, therefore this
+                          needs to be added
+        basisset=<name> : All the available basissets are in the basisset
+                          directory. New basissets can be added from basisset
+                          exchange by using the gaussian format and adding
+                          '****' over the H atom. No G orbitals are
+                          implemented!
+        maxiter=100     : maxiter is an integer defining the maximum number of
+                          iterations for the SCF cycle.
+        precision=1e-08 : Precision defines the convergence criterium for the
+                          SCF cycle
+        guess=string    : guess is the initial guess for the SCF cycle.
+                          guess=HCore : uses the HCore guess (which is bad)
+                          guess=GWH   : uses the generalized Wolfsberg
+                                        Helmholtz guess (better)
+------------------------------------------------------------------------------
+    'geometry' section:
+        atomname x y z  : atomname is the name of the atom, and x, y, and z
+                          are its coordinates. It is important, that the ')'
+                          ending this section is put into a new line!
+******************************************************************************

@@ -1,0 +1,14 @@
+$general(
+verbose=3)
+$method(
+RHF,
+basisset=6-31+g**,
+maxiter=100,
+precision=1e-08,
+guess=GWH)
+$geometry(
+O 	0.000 	0.000 	0.112
+H 	0.000 	0.759 	-0.448
+H 	0.000 	-0.759 	-0.448
+)
+
