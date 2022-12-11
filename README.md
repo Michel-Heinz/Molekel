@@ -10,20 +10,21 @@ Ostlund. The cmake build is based on the work of Leonard Reuter (https://github.
 The program is intended to serve for educational purposes, however, feel free to do what you
 want with it!
 ## Build Instructions
-In order for this code to work, you need the gfortran compiler, and the lapack and blas 
-libraries.
+In order for this code to work, you need the gfortran compiler, the lapack and blas 
+libraries, make, and cmake.
 
 
 Clone the repository to your desired location, then use the following commands to build
 the program.
 ```
+sudo apt install libblas-dev liblapack-dev make cmake gfortran
 export MOLEKEL=<path/to/molekel>
 cd $MOLEKEL
 mkdir build
 cd build
 cmake ..
 make molekel
-export PATH=$PATH:MOLEKEL/build/bin
+export PATH=$PATH:$MOLEKEL/build/bin
 ```
 And you are all set! You can try your build with the example.in in the test folder. 
 You have to pipe the output in a file, else it will be printed in your terminal.
